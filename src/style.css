@@ -1,0 +1,29 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #060b18; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif; color: #f6efe0; }
+#scene { position: fixed; inset: 0; width: 100%; height: 100%; display: block; outline: none; }
+
+#hud {
+    position: fixed; top: 16px; left: 16px; max-width: 330px; padding: 14px 16px;
+    font-size: 13px; line-height: 1.55; user-select: none; pointer-events: none;
+    background: rgba(8, 14, 30, 0.55); backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px;
+}
+#hud h1 { font-size: 16px; margin-bottom: 6px; }
+#hud b { color: #ffd98a; font-weight: 600; }
+
+#loader {
+    position: fixed; inset: 0; z-index: 10; display: grid; place-items: center;
+    background: radial-gradient(circle at 50% 40%, #14213f, #060b18);
+    transition: opacity 0.8s ease;
+}
+#loader.hidden { opacity: 0; pointer-events: none; }
+.loader-box { width: min(340px, 80vw); text-align: center; }
+.loader-title { font-size: 22px; margin-bottom: 18px; }
+.loader-bar { height: 6px; background: rgba(255,255,255,0.12); border-radius: 6px; overflow: hidden; }
+#loader-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #ffb347, #ff6f61); transition: width 0.2s; }
+.loader-hint { margin-top: 12px; font-size: 12px; opacity: 0.7; }
+
+.lil-gui.root { --width: 320px; position: fixed; top: 12px; right: 12px; max-height: calc(100% - 24px); overflow-y: auto; }
+
+@media (max-width: 700px) { #hud { display: none; } }

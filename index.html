@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новорічний ярмарок — 3D</title>
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+    <canvas id="scene"></canvas>
+
+    <div id="loader">
+        <div class="loader-box">
+            <div class="loader-title">🎄 Новорічний ярмарок</div>
+            <div class="loader-bar"><div id="loader-fill"></div></div>
+            <div class="loader-hint" id="loader-text">Завантаження текстур…</div>
+        </div>
+    </div>
+
+    <div id="hud">
+        <h1>🎄 Новорічний ярмарок</h1>
+        <p><b>Клік</b> — кинути сніжку (вона збиває подарунки й сніговиків)</p>
+        <p><b>Мишка</b> — крутити · <b>колесо</b> — наближення · <b>ПКМ</b> — рух</p>
+        <p>Панель праворуч — світло, рендер, сніг, фізика</p>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
